@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
@@ -6,14 +5,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -23,16 +15,22 @@ import { User, Phone, Mail, MessageSquare, Send } from "lucide-react";
 // Define the form schema with validation rules
 const formSchema = z.object({
   objective: z.enum(["sensor", "collaborate", "donate"], {
-    required_error: "Por favor seleccione un objetivo",
+    required_error: "Por favor seleccione un objetivo"
   }),
-  name: z.string().min(2, { message: "El nombre debe tener al menos 2 caracteres" }),
-  email: z.string().email({ message: "Por favor ingrese un email válido" }),
-  phone: z.string().min(10, { message: "Por favor ingrese un número de teléfono válido" }),
-  message: z.string().min(10, { message: "El mensaje debe tener al menos 10 caracteres" }),
+  name: z.string().min(2, {
+    message: "El nombre debe tener al menos 2 caracteres"
+  }),
+  email: z.string().email({
+    message: "Por favor ingrese un email válido"
+  }),
+  phone: z.string().min(10, {
+    message: "Por favor ingrese un número de teléfono válido"
+  }),
+  message: z.string().min(10, {
+    message: "El mensaje debe tener al menos 10 caracteres"
+  })
 });
-
 type FormValues = z.infer<typeof formSchema>;
-
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -44,27 +42,25 @@ const Contact = () => {
       name: "",
       email: "",
       phone: "",
-      message: "",
-    },
+      message: ""
+    }
   });
 
   // Handle form submission
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     console.log(data);
-    
+
     // Simulate API call with timeout
     setTimeout(() => {
       toast.success("¡Gracias por contactarnos! Te responderemos pronto.", {
-        description: "Hemos recibido tu mensaje correctamente.",
+        description: "Hemos recibido tu mensaje correctamente."
       });
       form.reset();
       setIsSubmitting(false);
     }, 1000);
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
         {/* Banner Section */}
@@ -87,18 +83,12 @@ const Contact = () => {
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     {/* Objective Selection */}
-                    <FormField
-                      control={form.control}
-                      name="objective"
-                      render={({ field }) => (
-                        <FormItem className="space-y-3">
-                          <FormLabel>¿Cuál es tu objetivo?</FormLabel>
+                    <FormField control={form.control} name="objective" render={({
+                    field
+                  }) => <FormItem className="space-y-3">
+                          <FormLabel>¿Cómo quieres colaborar?</FormLabel>
                           <FormControl>
-                            <RadioGroup
-                              onValueChange={field.onChange}
-                              defaultValue={field.value}
-                              className="flex flex-col space-y-1"
-                            >
+                            <RadioGroup onValueChange={field.onChange} defaultValue={field.value} className="flex flex-col space-y-1">
                               <FormItem className="flex items-center space-x-3 space-y-0">
                                 <FormControl>
                                   <RadioGroupItem value="sensor" />
@@ -126,16 +116,12 @@ const Contact = () => {
                             </RadioGroup>
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        </FormItem>} />
 
                     {/* Name Field */}
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
+                    <FormField control={form.control} name="name" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Nombre</FormLabel>
                           <FormControl>
                             <div className="relative">
@@ -144,16 +130,12 @@ const Contact = () => {
                             </div>
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        </FormItem>} />
 
                     {/* Email Field */}
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
+                    <FormField control={form.control} name="email" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Correo electrónico</FormLabel>
                           <FormControl>
                             <div className="relative">
@@ -162,16 +144,12 @@ const Contact = () => {
                             </div>
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        </FormItem>} />
 
                     {/* Phone Field */}
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
+                    <FormField control={form.control} name="phone" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Teléfono</FormLabel>
                           <FormControl>
                             <div className="relative">
@@ -180,40 +158,26 @@ const Contact = () => {
                             </div>
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        </FormItem>} />
 
                     {/* Message Field */}
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
+                    <FormField control={form.control} name="message" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Mensaje</FormLabel>
                           <FormControl>
                             <div className="relative">
                               <MessageSquare className="absolute left-3 top-3 text-muted-foreground" />
-                              <Textarea 
-                                placeholder="Escribe tu mensaje aquí..." 
-                                className="min-h-[120px] pl-10"
-                                {...field}
-                              />
+                              <Textarea placeholder="Escribe tu mensaje aquí..." className="min-h-[120px] pl-10" {...field} />
                             </div>
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        </FormItem>} />
 
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? (
-                        "Enviando..."
-                      ) : (
-                        <>
+                      {isSubmitting ? "Enviando..." : <>
                           Enviar mensaje <Send className="ml-2" />
-                        </>
-                      )}
+                        </>}
                     </Button>
                   </form>
                 </Form>
@@ -239,7 +203,7 @@ const Contact = () => {
                   <p className="mb-4">Mantente informado sobre la calidad del aire en Monterrey a través de nuestras redes sociales.</p>
                   <div className="flex space-x-4">
                     <a href="#" className="text-primary hover:text-primary/80 transition-colors">Facebook</a>
-                    <a href="#" className="text-primary hover:text-primary/80 transition-colors">Twitter</a>
+                    
                     <a href="#" className="text-primary hover:text-primary/80 transition-colors">Instagram</a>
                   </div>
                 </div>
@@ -249,8 +213,6 @@ const Contact = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
