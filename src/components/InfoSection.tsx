@@ -58,7 +58,7 @@ const InfoSection = () => {
 
             <div className="mt-8">
               <Button asChild>
-                <Link to="/about">Más información sobre salud</Link>
+                <Link to="/health">Más información sobre salud</Link>
               </Button>
             </div>
           </div>
