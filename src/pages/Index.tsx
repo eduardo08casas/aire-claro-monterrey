@@ -1,14 +1,11 @@
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AirQualityMap from "@/components/AirQualityMap";
 import InfoSection from "@/components/InfoSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <Hero />
@@ -25,7 +22,7 @@ const Index = () => {
               la calidad del aire en Monterrey.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/20">
+              <Button variant="outline" size="lg" className="border-white hover:bg-white/20 text-emerald-950">
                 Registrarse
               </Button>
               <Button variant="default" size="lg" className="bg-white text-primary hover:bg-white/90">
@@ -36,8 +33,6 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
