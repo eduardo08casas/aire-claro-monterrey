@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { toast } from "sonner";
-import { User, Phone, Mail, MessageSquare, Send } from "lucide-react";
+import { User, Phone, Mail, MessageSquare, Send, Twitter } from "lucide-react";
 
 // Define the form schema with validation rules
 const formSchema = z.object({
@@ -202,9 +202,16 @@ const Contact = () => {
                   <h3 className="font-bold text-xl mb-4">Síguenos</h3>
                   <p className="mb-4">Mantente informado sobre la calidad del aire en Monterrey a través de nuestras redes sociales.</p>
                   <div className="flex space-x-4">
-                    <a href="#" className="text-primary hover:text-primary/80 transition-colors">Facebook</a>
-                    
-                    <a href="#" className="text-primary hover:text-primary/80 transition-colors">Instagram</a>
+                    <a href="#" className="text-primary hover:text-primary/80 transition-colors flex items-center gap-1">
+                      Facebook
+                    </a>
+                    <a href="#" className="text-primary hover:text-primary/80 transition-colors flex items-center gap-1">
+                      <Twitter size={18} />
+                      Twitter
+                    </a>
+                    <a href="#" className="text-primary hover:text-primary/80 transition-colors">
+                      Instagram
+                    </a>
                   </div>
                 </div>
               </div>
