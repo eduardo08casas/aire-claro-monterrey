@@ -101,9 +101,7 @@ const Contact = () => {
                                 <FormControl>
                                   <RadioGroupItem value="collaborate" />
                                 </FormControl>
-                                <FormLabel className="font-normal">
-                                  Quiero colaborar
-                                </FormLabel>
+                                <FormLabel className="font-normal">Quiero apender más</FormLabel>
                               </FormItem>
                               <FormItem className="flex items-center space-x-3 space-y-0">
                                 <FormControl>
