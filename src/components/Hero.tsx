@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="text-base">
-              <Link to="/dashboard">Ver Datos en Vivo</Link>
+              <Link to="/dashboard">Go to Dashboard</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base">
               <Link to="/about">Conoce Más</Link>
