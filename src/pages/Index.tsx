@@ -1,9 +1,12 @@
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AirQualityMap from "@/components/AirQualityMap";
 import InfoSection from "@/components/InfoSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -21,14 +24,9 @@ const Index = () => {
               eventos relacionados y oportunidades para involucrarte en mejorar 
               la calidad del aire en Monterrey.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="outline" size="lg" className="border-white hover:bg-white/20 text-emerald-950">
-                Registrarse
-              </Button>
-              <Button variant="default" size="lg" className="bg-white text-primary hover:bg-white/90">
-                Contacto
-              </Button>
-            </div>
+            <Button asChild variant="default" size="lg" className="bg-white text-primary hover:bg-white/90">
+              <Link to="/contact">Únete</Link>
+            </Button>
           </div>
         </section>
       </main>
