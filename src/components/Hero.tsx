@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white -z-10"></div>
       
       {/* Animated air particles */}
-      <div className="absolute inset-0 -z-5 opacity-20">
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="air-quality-dot absolute top-1/4 left-1/4 h-4 w-4 rounded-full bg-airquality-good animate-pulse-slow" style={{animationDelay: "0s"}}></div>
         <div className="air-quality-dot absolute top-1/3 left-1/2 h-3 w-3 rounded-full bg-airquality-moderate animate-pulse-slow" style={{animationDelay: "0.5s"}}></div>
         <div className="air-quality-dot absolute top-2/3 left-1/3 h-5 w-5 rounded-full bg-airquality-unhealthy animate-pulse-slow" style={{animationDelay: "1s"}}></div>
@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             Aire Claro Monterrey
           </h1>
