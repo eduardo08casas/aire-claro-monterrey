@@ -33,7 +33,9 @@ const Navbar = () => {
           <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contacto
           </Link>
-          <Button variant="default">Explorar Datos</Button>
+          <Button variant="default" asChild>
+            <Link to="/explore">Explorar Datos</Link>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -81,7 +83,9 @@ const Navbar = () => {
             >
               Contacto
             </Link>
-            <Button variant="default" className="w-full mt-2">Explorar Datos</Button>
+            <Button variant="default" className="w-full mt-2" asChild>
+              <Link to="/explore" onClick={() => setIsMenuOpen(false)}>Explorar Datos</Link>
+            </Button>
           </nav>
         </div>
       )}
