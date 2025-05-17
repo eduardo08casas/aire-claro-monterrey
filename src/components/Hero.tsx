@@ -26,13 +26,13 @@ const Hero = () => {
             Monitoreo y datos de calidad del aire en tiempo real para Monterrey, Nuevo León. 
             Conoce lo que respiras y toma decisiones informadas.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className="text-base">
-              <Link to="/dashboard">Go to Dashboard</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-base">
-              <Link to="/about">Conoce Más</Link>
-            </Button>
+           <div className="mt-12 text-center">
+                <Button asChild size="lg" className="mr-4">
+                  <Link to="/dashboard">Ver Datos en Tiempo Real</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/contact">Contactar con Nosotros</Link>
+                </Button>
           </div>
         </div>
 
