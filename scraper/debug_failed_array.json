@@ -1,0 +1,48 @@
+[{"Estacion":"noroeste3","Parameter":"PM10","HrAveData":39,"Concentracion":45,"Date":"2025-06-01 09:00"},{"Estacion":"este","Parameter":"O3","HrAveData":19,"Concentracion":20,"Date":"2025-06-01 09:00"},{"Estacion":"suroeste2","Parameter":"PM25","HrAveData":25,"Concentracion":13,"Date":"2025-06-01 09:00"},{"Estacion":"Suroeste","Parameter":"PM10","HrAveData":40,"Concentracion":36,"Date":"2025-06-01 09:00"},{"Estacion":"noroeste2","Parameter":"PM10","HrAveData":45,"Concentracion":64,"Date":"2025-06-01 09:00"},{"Estacion":"noroeste","Parameter":"PM10","HrAveData":38,"Concentracion":33,"Date":"2025-06-01 09:00"},{"Estacion":"norte2","Parameter":"PM10","HrAveData":37,"Concentracion":44,"Date":"2025-06-01 09:00"},{"Estacion":"Norte","Parameter":"O3","HrAveData":18,"Concentracion":20,"Date":"2025-06-01 09:00"},{"Estacion":"noreste2","Parameter":"PM10","HrAveData":34,"Concentracion":48,"Date":"2025-06-01 09:00"},{"Estacion":"noreste","Parameter":"O3","HrAveData":20,"Concentracion":22,"Date":"2025-06-01 09:00"},{"Estacion":"sur","Parameter":"PM10","HrAveData":23,"Concentracion":29,"Date":"2025-06-01 09:00"},{"Estacion":"sureste3","Parameter":"PM25","HrAveData":32,"Concentracion":15,"Date":"2025-06-01 09:00"},{"Estacion":"sureste2","Parameter":"PM25","HrAveData":39,"Concentracion":17,"Date":"2025-06-01 09:00"},{"Estacion":"sureste","Parameter":"PM10","HrAveData":-1,"Concentracion":-1,"Date":"2025-06-01 09:00"},{"Estacion":"centro","Parameter":"PM10","HrAveData":33,"Concentracion":33,"Date":"2025-06-01 09:00"}] 
+	console.log(arrayIMKTodo);
+	//cuadro de leyenda de índice de calidad del aire   C0C0C0
+    function getColor(d) {
+        return d > 200  ? 5:  //purpura
+               d > 150  ? 4:  //rojo
+               d > 100  ? 3:  //naranja
+               d > 50   ? 2:  //amarillo
+               d >= 0    ? 1:  //verde
+                          0;
+    }
+
+    function getLabel(d) {
+        return d > 200  ? 'Extremadamente mala':
+               d > 150  ? 'Muy mala':
+               d > 100  ? 'Mala':
+               d > 50   ? 'Regular':
+               d >= 0    ? 'Buena':
+                          'Mantenimiento';
+    }
+ var iconURLPrefix = 'marcadores/drawable-hdpi/';
+	
+ var iconos = [
+        iconURLPrefix + 'gray_marker2.png',
+        iconURLPrefix + 'green_marker2.png',
+        iconURLPrefix + 'yellow_marker2.png',
+        iconURLPrefix + 'orange_marker2.png',
+        iconURLPrefix + 'red_marker2.png',
+		iconURLPrefix + 'purple_marker2.png'
+    ]	
+	
+	var iconosLength = iconos.length;
+/*
+	 var locations = [
+	['CENTRO',25.67602,-100.335847,4,'Obispado','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_CE','centro'],
+	['SURESTE',25.66827,-100.249580,2,'Pastora','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_SE','sureste'],
+	['NORESTE',25.74543,-100.255020,3,'San Nicolás','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_NE','noreste'],
+	['NOROESTE',25.75712,-100.365974,5,'San Bernabé','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_NO','noroeste'],
+	['SUROESTE',25.675674,-100.465018,6,'Santa Catarina','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_SO','Suroeste'],
+	['NOROESTE 2',25.783456,-100.585874,7,'García','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_NO2','noroeste2'],
+	['NORTE',25.80194,-100.343056,8,'Escobedo','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_NORTE','Norte'],
+	['NORESTE 2',25.77722,-100.188055,1,'Apodaca','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_NE2','noreste2'],	
+	['SURESTE 2',25.64611,-100.095555,9,'Juárez','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_SE2','sureste2'],
+	['SUROESTE 2',25.66528,-100.412778,10,'San Pedro','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_SO2','suroeste2'],
+	['SURESTE 3',25.600874,-99.995298,11,'Cadereyta','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_SE3','sureste3'],	
+	['NORTE 2',25.729787,-100.310028,12,'Universidad','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_NORTE2','norte2'],
+	['SUR',25.575383,-100.249371,13,'Pueblo Serena','http://aire.nl.gob.mx:81/SIMA2017reportes/ReporteDiariosima.php?estacion1=HRAVEDATA_SUR','sur']
+      ]

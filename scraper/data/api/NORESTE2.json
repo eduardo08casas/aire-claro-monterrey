@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "PM10m",
+    "Date": "2025-06-11 17:00:00",
+    "HrAveData": 43.333,
+    "ParameterLargo": "Partículas menores a 10 micras (PM10)"
+  },
+  {
+    "Parameter": "PM25m",
+    "Date": "2025-06-11 17:00:00",
+    "HrAveData": "ND",
+    "ParameterLargo": "Partículas menores a 2.5 micras (PM2.5)"
+  },
+  {
+    "Parameter": "SO2m",
+    "Date": "2025-06-11 17:00:00",
+    "HrAveData": 3.554,
+    "ParameterLargo": "Bióxido de azufre (SO2)"
+  },
+  {
+    "Parameter": "O3m",
+    "Date": "2025-06-11 17:00:00",
+    "HrAveData": 17,
+    "ParameterLargo": "Ozono (O3)"
+  },
+  {
+    "Parameter": "NO2m",
+    "Date": "2025-06-11 17:00:00",
+    "HrAveData": "ND",
+    "ParameterLargo": "Bióxido de nitrógeno (NO2)"
+  }
+]

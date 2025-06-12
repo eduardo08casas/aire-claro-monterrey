@@ -1,0 +1,111 @@
+{
+  "source": "https://aire.nl.gob.mx/airemapbing/airebing_ns.php",
+  "last_updated": "2025-06-01T12:12:16.198886",
+  "measurements": [
+    {
+      "Estacion": "noroeste3",
+      "Parameter": "PM10",
+      "HrAveData": 39,
+      "Concentracion": 45,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "este",
+      "Parameter": "O3",
+      "HrAveData": 19,
+      "Concentracion": 20,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "suroeste2",
+      "Parameter": "PM25",
+      "HrAveData": 25,
+      "Concentracion": 13,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "Suroeste",
+      "Parameter": "PM10",
+      "HrAveData": 40,
+      "Concentracion": 36,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "noroeste2",
+      "Parameter": "PM10",
+      "HrAveData": 45,
+      "Concentracion": 64,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "noroeste",
+      "Parameter": "PM10",
+      "HrAveData": 38,
+      "Concentracion": 33,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "norte2",
+      "Parameter": "PM10",
+      "HrAveData": 37,
+      "Concentracion": 44,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "Norte",
+      "Parameter": "O3",
+      "HrAveData": 18,
+      "Concentracion": 20,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "noreste2",
+      "Parameter": "PM10",
+      "HrAveData": 34,
+      "Concentracion": 48,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "noreste",
+      "Parameter": "O3",
+      "HrAveData": 20,
+      "Concentracion": 22,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "sur",
+      "Parameter": "PM10",
+      "HrAveData": 23,
+      "Concentracion": 29,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "sureste3",
+      "Parameter": "PM25",
+      "HrAveData": 32,
+      "Concentracion": 15,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "sureste2",
+      "Parameter": "PM25",
+      "HrAveData": 39,
+      "Concentracion": 17,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "sureste",
+      "Parameter": "PM10",
+      "HrAveData": -1,
+      "Concentracion": -1,
+      "Date": "2025-06-01 09:00"
+    },
+    {
+      "Estacion": "centro",
+      "Parameter": "PM10",
+      "HrAveData": 33,
+      "Concentracion": 33,
+      "Date": "2025-06-01 09:00"
+    }
+  ]
+}
