@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="relative h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
               <div className="absolute h-4 w-4 rounded-full bg-white"></div>
             </div>
-            <span className="text-xl font-bold tracking-tight">Aire Claro</span>
+            <span className="text-xl font-bold tracking-tight">Aire Libre</span>
           </Link>
         </div>
 

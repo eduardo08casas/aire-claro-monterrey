@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="relative h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <div className="absolute h-4 w-4 rounded-full bg-white"></div>
               </div>
-              <span className="text-xl font-bold tracking-tight">Aire Claro</span>
+              <span className="text-xl font-bold tracking-tight">Aire Libre</span>
             </Link>
             <p className="text-slate-300 mb-4 max-w-md">
               Monitoreando la calidad del aire de Monterrey para mantener 
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-slate-800 pt-6 mt-8 text-center sm:flex sm:justify-between sm:text-left">
-          <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Aire Claro Monterrey. Todos los derechos reservados.</p>
+          <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Aire Libre Monterrey. Todos los derechos reservados.</p>
           <div className="mt-4 sm:mt-0">
             <a href="#" className="text-sm text-slate-400 hover:text-white transition-colors mx-3 sm:ml-0 sm:mr-6">Términos de Uso</a>
             <a href="#" className="text-sm text-slate-400 hover:text-white transition-colors mx-3 sm:mx-0">Política de Privacidad</a>

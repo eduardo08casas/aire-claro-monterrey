@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Aire Claro Monterrey
+            Aire Libre Monterrey
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
             Monitoreo y datos de calidad del aire en tiempo real para Monterrey, Nuevo León. 
